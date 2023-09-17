@@ -40,6 +40,7 @@ html {
 
 .col-3 {
     width: 33.33333%;
+    margin-top: 16px;
 }
 
 .col-2 {
@@ -79,10 +80,19 @@ html {
     z-index: 1;
 }
 
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
 }
 
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     line-height: 46px;
@@ -93,6 +103,15 @@ html {
     background-color: #f44336;
     display: block;
 }
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+
 
 #nav {
     display: inline-block;
@@ -120,7 +139,7 @@ html {
     text-decoration: none;
     --height:46px;
     line-height: var(--height);
-    padding: 0 24px;
+    padding: 2px 12px;
     display: block;
 }
 
@@ -132,10 +151,10 @@ html {
 #nav > li:hover > a {
     color: #000;
     background-color: #ccc;
-    display: inline-block;
+    display: block;
 }
 
-.subnav {
+#nav .subnav {
     display: none;
     position: absolute;
     background-color: #fff;
@@ -183,10 +202,13 @@ html {
 }
 
 #content .content-select {
-    max-width: 800px;
+    width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 0 112px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .select-heading {
@@ -220,7 +242,6 @@ html {
 }
 
 #content .member-img {
-    margin-bottom: 16px;
     max-width: 154px;
     border-radius: 4px;
 }
@@ -263,7 +284,7 @@ html {
 }
 
 .place-list {
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .place-img {
@@ -310,6 +331,15 @@ html {
 .contact-info i[class*="ti-"] {
     width: 30px;
     display: inline-block;
+}
+
+.contact-info a {
+    color: #101aef;
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
 }
 
 .contact-form {
